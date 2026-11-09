@@ -30,12 +30,6 @@ export class HomePage {
     return await testStep(title, stepToRun, this.userId);
   }
 
-  async clickSomething() {
-    await this.step(`Click something`, async () => {
-      // example method
-    });
-  }
-
   async assertYourAccountWasCreated() {
     await this.step(`Assert Your account was created `, async () => {
       await expect(this.textYourAccountWasCreated).toBeVisible();
