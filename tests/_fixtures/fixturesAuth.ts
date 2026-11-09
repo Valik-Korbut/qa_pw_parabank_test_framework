@@ -4,7 +4,6 @@ import { SingUpPage } from '../../src/ui/pages/singUpPage';
 import { HomePage } from '../../src/ui/pages/HomePage';
 import { CustomerLookupPage } from '../../src/ui/pages/CustomerLookupPage';
 import { OpenNewAccuontPage } from '../../src/ui/pages/OpenNewAccuontPage';
-import { use } from 'react';
 import { RequestLoanPage } from '../../src/ui/pages/RequestLoanPage';
 import { TransferFundsPage } from '../../src/ui/pages/TransferFundsPage';
 import { AccountsOverviewPage } from '../../src/ui/pages/AccountsOverviewPage';

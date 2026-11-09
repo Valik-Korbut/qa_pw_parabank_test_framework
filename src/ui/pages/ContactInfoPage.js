@@ -39,7 +39,7 @@ export class ContactInfoPage {
   }
   async fillCityField(user2) {
     await this.step(`Fill city field`, async () => {
-      await this.addressField.fill(user2.city);
+      await this.cityField.fill(user2.city);
     });
   }
   async fillStateField(user2) {

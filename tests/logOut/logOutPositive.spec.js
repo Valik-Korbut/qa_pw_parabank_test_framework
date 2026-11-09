@@ -13,5 +13,5 @@ test(`Log out positive`, async ({ homePage, singUpPage, page, user }) => {
   await allure.severity(Severity.BLOCKER);
   await singUpUser(page, user);
   await homePage.clickLogOutButton();
-  await singUpPage.assertCustomreLogitTextVisible();
+  await singUpPage.assertCustomerLogoutTextVisible();
 });

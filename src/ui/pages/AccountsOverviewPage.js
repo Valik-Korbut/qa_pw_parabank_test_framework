@@ -1,5 +1,4 @@
 import { expect, testStep } from '../../common/helpers/pwHelpers';
-import * as allure from 'allure-js-commons';
 
 export class AccountsOverviewPage {
   constructor(page, userId = 0) {

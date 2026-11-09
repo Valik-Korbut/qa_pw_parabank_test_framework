@@ -1,4 +1,3 @@
-import * as allure from 'allure-js-commons';
 import { expect, testStep } from '../../common/helpers/pwHelpers';
 
 export class RequestLoanPage {

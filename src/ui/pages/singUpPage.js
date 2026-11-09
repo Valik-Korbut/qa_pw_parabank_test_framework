@@ -20,7 +20,7 @@ export class SingUpPage {
     this.userNameSingIn = page.locator('input[name="username"]');
     this.passwordSingIn = page.locator('input[name="password"]');
     this.singInButton = page.getByRole('button', { name: 'Log In' });
-    this.customreLogitText = page.getByRole('heading', {
+    this.customerLogoutText = page.getByRole('heading', {
       name: 'Customer Login',
     });
   }
@@ -151,9 +151,9 @@ export class SingUpPage {
       await expect(this.page.getByText(expectedText)).toBeVisible();
     });
   }
-  async assertCustomreLogitTextVisible() {
-    await this.step(`Assert log Out is positive`, async () => {
-      await expect(this.customreLogitText).toBeVisible();
+  async assertCustomerLogoutTextVisible() {
+    await this.step(`Assert log out is positive`, async () => {
+      await expect(this.customerLogoutText).toBeVisible();
     });
   }
   async clickForgotloginInfoButton(page) {
