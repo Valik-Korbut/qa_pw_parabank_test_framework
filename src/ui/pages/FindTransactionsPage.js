@@ -1,5 +1,4 @@
 import { expect, testStep } from '../../common/helpers/pwHelpers';
-import * as allure from 'allure-js-commons';
 
 export class FindTransactionPage {
   constructor(page, userId = 0) {
@@ -14,8 +13,8 @@ export class FindTransactionPage {
     this.textTransactionsDetails = page.getByRole('heading', {
       name: 'Transaction Details',
     });
-    this.betwenField = page.locator('#fromDate');
-    this.fromDateField = page.locator('#toDate');
+    this.fromDateField = page.locator('#fromDate');
+    this.toDateField = page.locator('#toDate');
     this.findByDateButton = page.locator('#findByDateRange');
     this.transactionDateField = page.locator('#transactionDate');
     this.findbyDateTodayButton = page.locator('#findByDate');
@@ -55,19 +54,19 @@ export class FindTransactionPage {
       return (await idCell.innerText()).trim();
     });
   }
-  async fillBetwenField() {
-    await this.step(`Fill detwen field`, async () => {
-      await this.betwenField.fill('10-08-2026');
-    });
-  }
   async fillFromDateField() {
     await this.step(`Fill from date field`, async () => {
+      await this.fromDateField.fill('10-08-2026');
+    });
+  }
+  async fillToDateField() {
+    await this.step(`Fill to date field`, async () => {
       const now = new Date();
       const mm = String(now.getMonth() + 1).padStart(2, '0');
       const dd = String(now.getDate()).padStart(2, '0');
       const yyyy = now.getFullYear();
 
-      await this.fromDateField.fill(`${mm}-${dd}-${yyyy}`);
+      await this.toDateField.fill(`${mm}-${dd}-${yyyy}`);
     });
   }
   async clickFindByDateButton() {

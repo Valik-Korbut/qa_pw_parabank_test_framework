@@ -3,7 +3,7 @@ import { BillPayPage } from '../../src/ui/pages/BillPayPage';
 import { SingUpPage } from '../../src/ui/pages/singUpPage';
 import { HomePage } from '../../src/ui/pages/HomePage';
 import { CustomerLookupPage } from '../../src/ui/pages/CustomerLookupPage';
-import { OpenNewAccuontPage } from '../../src/ui/pages/OpenNewAccuontPage';
+import { OpenNewAccountPage } from '../../src/ui/pages/OpenNewAccountPage';
 import { RequestLoanPage } from '../../src/ui/pages/RequestLoanPage';
 import { TransferFundsPage } from '../../src/ui/pages/TransferFundsPage';
 import { AccountsOverviewPage } from '../../src/ui/pages/AccountsOverviewPage';
@@ -14,7 +14,7 @@ export const test = base.extend<{
   singUpPage: SingUpPage;
   homePage: HomePage;
   customerLookupPage: CustomerLookupPage;
-  openNewAccuontPage: OpenNewAccuontPage;
+  openNewAccuontPage: OpenNewAccountPage;
   requestLoanPage: RequestLoanPage;
   transferFundsPage: TransferFundsPage;
   accountsOverviewPage: AccountsOverviewPage;
@@ -41,7 +41,7 @@ export const test = base.extend<{
   },
 
   openNewAccuontPage: async ({ page }, use) => {
-    const openNewAccuontPage = new OpenNewAccuontPage(page);
+    const openNewAccuontPage = new OpenNewAccountPage(page);
 
     await use(openNewAccuontPage);
   },

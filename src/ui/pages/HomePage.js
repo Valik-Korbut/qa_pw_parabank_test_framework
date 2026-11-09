@@ -1,5 +1,4 @@
 import { expect, testStep } from '../../common/helpers/pwHelpers';
-import * as allure from 'allure-js-commons';
 
 export class HomePage {
   constructor(page, userId = 0) {
@@ -7,7 +6,7 @@ export class HomePage {
     this.userId = userId;
     this.textYourAccountWasCreated = page.getByText('Your account was created');
     this.logOutButton = page.getByRole('link', { name: 'Log Out' });
-    this.OpenNewAccuontButton = page.getByRole('link', {
+    this.OpenNewAccountButton = page.getByRole('link', {
       name: 'Open New Account',
     });
     this.requestLoanButton = page.getByRole('link', { name: 'Request Loan' });
@@ -47,9 +46,9 @@ export class HomePage {
       await this.logOutButton.click();
     });
   }
-  async cliclOpenNewAccountButton() {
+  async clickOpenNewAccountButton() {
     await this.step(`Click Open New Account Button`, async () => {
-      await this.OpenNewAccuontButton.click();
+      await this.OpenNewAccountButton.click();
     });
   }
   async clickRequestLoanButton() {

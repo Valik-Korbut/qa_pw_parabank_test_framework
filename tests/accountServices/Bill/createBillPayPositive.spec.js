@@ -1,4 +1,4 @@
-import { singUpUser } from '../../../src/ui/actions/auth/SingUpUser';
+import { singUpUser } from '../../../src/ui/actions/auth/SignUpUser';
 import { test } from '../../_fixtures/fixtures';
 import * as allure from 'allure-js-commons';
 import { Severity } from 'allure-js-commons';

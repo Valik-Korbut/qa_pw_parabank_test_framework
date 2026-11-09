@@ -1,5 +1,5 @@
 import { test } from '../../_fixtures/fixtures';
-import { singUpUser } from '../../../src/ui/actions/auth/SingUpUser';
+import { singUpUser } from '../../../src/ui/actions/auth/SignUpUser';
 import { expect } from 'allure-playwright';
 import * as allure from 'allure-js-commons';
 import { Severity } from 'allure-js-commons';
@@ -11,7 +11,7 @@ test.beforeEach(
     await allure.subSuite('Positive scenarios');
 
     await singUpUser(page, user);
-    await homePage.cliclOpenNewAccountButton();
+    await homePage.clickOpenNewAccountButton();
     await openNewAccuontPage.waitForURL();
     await openNewAccuontPage.selectTypeChecking();
     await openNewAccuontPage.clickSelectOptionIdAccount();

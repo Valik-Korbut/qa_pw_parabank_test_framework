@@ -8,7 +8,6 @@ import {
   EMPTY_ZIP_CODE_MESSAGE,
   EMPTY_SSN_MESSAGE,
 } from '../../src/ui/constants/authErrorMessages';
-import { singUpUser } from '../../src/ui/actions/auth/SingUpUser';
 import * as allure from 'allure-js-commons';
 import { Severity } from 'allure-js-commons';
 
